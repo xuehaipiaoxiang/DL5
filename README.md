@@ -12,12 +12,6 @@
 ## COCO
 * 左上和宽高
 
-# 摘要
-## 假设你的模型B是基于A改进
-* 先说原始A的优点
-* however A的缺点
-* 提出B模型，和B的优点
-
 # transformer
 * vis tranformer 主要用了 transformer 中的encoder结构外加一个cls分类符
 * detr 用了整个transformer结构 + 共享FFN用于预测目标和回归
