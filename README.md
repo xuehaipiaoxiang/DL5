@@ -79,21 +79,12 @@
 ## VFE voxel feature encoding
 一种点云转体素，再特征提取的方法
 
-# 重新回顾Vit (vision transformer)
-## cls token 并不是必须
- ![](./Capture11.png)
- ![](./Capture12.png)
-
-* 
-
 # SLAM
 * simultaneously locating and mapping
 * 同步定位于地图构建
 * occupancy grid 占据栅格
 
 # 想法
-* 为什么是点云特征 concatenate 图像特征？
-  * 由于采样，位置的相对关系，点云的密度本身不均匀。因此，是否可以通过图像学习一个MASK，再用MASK处理点云，最后套用基于点云的3D检测算法
 * 一般类似centerNet，FCOS这样基于**点**的 检测网络，在head阶段一般有类似heat-map的目标中心点预测分支，和于中心点偏移量的分支。二者共同投票决定最终的分支。
   * 那么，是否可以在backbone特征提取阶段，在每个像素点的位置**concatenate 与中心点的偏移**增强特征，从而在head阶段直接预测目标中心点。
 
